@@ -34,6 +34,7 @@ jobs:
       - name: Docker Images Build And Push
         uses: risfeng/docker-image-build-push-action@v1.0
         with:
+          context: ./src
           namespaces: vinicios.aguiar
           repository_name: rotten-popatoes
           image_version: v3
