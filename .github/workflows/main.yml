@@ -30,7 +30,7 @@ jobs:
           username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_PWD}}
       - name: Docker Images Build And Push
-        uses: docker/build-push-action@2.6.1
+        uses: risfeng/docker-image-build-push-action@v1.0
         with:
           # Docker Registry Url, eg: registry.xxxxx.cs.com
           registry_url: https://hub.docker.com/
