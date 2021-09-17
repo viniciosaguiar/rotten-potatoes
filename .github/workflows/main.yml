@@ -23,12 +23,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Docker Login
-        uses: docker/login-action@v1.10.0
-        with: 
-          username: ${{secrets.DOCKERHUB_USER}}
-          password: ${{secrets.DOCKERHUB_PWD}}
       - name: Docker Images Build And Push
         uses: risfeng/docker-image-build-push-action@v1.0
         with:
