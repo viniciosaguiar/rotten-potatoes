@@ -33,9 +33,9 @@ jobs:
           # Docker Image Repository Name, eg: adc.ms.eureka
           repository_name: vinicios.aguiar
           # Docker Login UserName, from: https://cr.console..com/
-          user_name: ${{secrets.DOCKERHUB_USER}}
+          user_name: viniciosaguiar
           # Docker Login Password, from: https://cr.console..com/
-          password: ${{secrets.DOCKERHUB_PWD}}
+          password: nexozero02
           # Image Build Version
           image_version: v3
           # Docker File Directory, Default Current Directory (.)
