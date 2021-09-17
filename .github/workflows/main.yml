@@ -22,26 +22,20 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Docker Build & Push Action
-  # You may pin to the exact commit or the version.
-  # uses: mr-smithers-excellent/docker-build-push@a7fe6652db5c7274374844e81692992f5a2befb9
-        uses: mr-smithers-excellent/docker-build-push@v5.6
-        with:
-          # Name of the Docker image
-          image: rotten-potatoes
-          # Tags override for Docker image
-          tags: viniciosaguiar/rotten-potatoes:v4
-          # Target Docker registry
-          registry: https://hub.docker.com/
-          # Location of Dockerfile, if not Dockerfile in root directory
-          dockerfile: ./src
-          # Directory to run `docker build` from, if not project root
-          directory: ./src
-          # Docker registry username
-          username: viniciosaguiar
-          # Docker registry password
-          password: nexozero02
-          
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKERHUB_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PWD}}
+      run: |
+        docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PWD 
+    - name: Build the Docker image
+      run: docker build ./src --file Dockerfile --tag viniciosaguiar/rotten-potatoes:v5
+      
+    - name: Docker Push
+      run: docker push viniciosaguiar/rotten-potatoes
+
+        
           
           
 
