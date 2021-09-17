@@ -29,9 +29,9 @@ jobs:
           # Docker Registry Url, eg: registry.xxxxx.cs.com
           registry_url: https://hub.docker.com/
           # Docker Image Namespaces, eg: adotcode
-          namespaces: rotten-potatoes
+          namespaces: vinicios.aguiar
           # Docker Image Repository Name, eg: adc.ms.eureka
-          repository_name: vinicios.aguiar
+          repository_name: rotten-popatoes
           # Docker Login UserName, from: https://cr.console..com/
           user_name: viniciosaguiar
           # Docker Login Password, from: https://cr.console..com/
