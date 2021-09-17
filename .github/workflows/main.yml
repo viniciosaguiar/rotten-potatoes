@@ -32,6 +32,6 @@ jobs:
           # Password or personal access token used to log against the Docker registry
           password: nexozero02
       - name: DockerHub Build And Push
-        run: docker build ./src --tag viniciosaguiar/rotten-potatoes:v4
+        run: docker build /src --tag viniciosaguiar/rotten-potatoes:v4
       - name: Docker Push
         run: docker push viniciosaguiar/rotten-potatoes:v4
