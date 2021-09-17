@@ -36,6 +36,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            viniciosaguiar/rotten-potatoes:latest 
+            viniciosaguiar/rotten-potatoes:latest
             
         
