@@ -37,8 +37,21 @@ jobs:
       run: docker tag viniciosaguiar/rotten-potatoes:latest viniciosaguiar/rotten-potatoes:${{github.run_number}}
     - name: Docker Push Version
       run: docker push viniciosaguiar/rotten-potatoes:${{github.run_number}}
-      
 
+  CD:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+       - uses: actions/checkout@v2
+       - name: Kubernetes set context
+         uses: Azure/k8s-set-context@v1.1
+         with:
+          method: kubeconfig
+          kubeconfig: ${{K8S_CONFIG}}
+       
+    
         
           
           
