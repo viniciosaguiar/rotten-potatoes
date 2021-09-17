@@ -28,7 +28,7 @@ jobs:
         DOCKER_USER: ${{secrets.DOCKERHUB_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PWD}}
       run: |
-        docker login -u viniciosaguiar -p nexozero02
+        docker login -u ${{secrets.DOCKERHUB_USER}} -p ${{secrets.DOCKERHUB_PWD}}
     - name: Build the Docker image
       run: docker build ./src --tag viniciosaguiar/rotten-potatoes:v5
       
