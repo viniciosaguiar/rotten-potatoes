@@ -37,5 +37,5 @@ jobs:
           push: true
           tags: |
             viniciosaguiar/rotten-potatoes:latest 
-            viniciosaguiar/rotten-potatoes:${{ github.run_number }}
+            
         
