@@ -25,10 +25,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: docker login
       env:
-        DOCKER_USER: ${{secrets.DOCKERHUB_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PWD}}
+        DOCKER_USER: viniciosaguiar
+        DOCKER_PASSWORD: nexozero02
       run: |
-        docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PWD 
+        docker login -u viniciosaguiar -p nexozero02
     - name: Build the Docker image
       run: docker build ./src --file Dockerfile --tag viniciosaguiar/rotten-potatoes:v5
       
