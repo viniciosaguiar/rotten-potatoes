@@ -30,7 +30,7 @@ jobs:
           username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_PWD}}
       - name: Docker Images Build And Push
-        uses: risfeng/docker-image-build-push-action@v1.0
+        uses: docker/build-push-action@2.6.1
         with: 
           context: ./src
           file: ./src/Dockerfile
