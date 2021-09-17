@@ -32,11 +32,11 @@ jobs:
     - name: Build the Docker image latest
       run: docker build ./src --tag viniciosaguiar/rotten-potatoes:latest
     - name: Build the Docker image version number
-      run: docker build ./src --tag viniciosaguiar/rotten-potatoes:${{github.rum_number}}
+      run: docker build ./src --tag viniciosaguiar/rotten-potatoes:${{github.run_number}}
     - name: Docker Push latest
       run: docker push viniciosaguiar/rotten-potatoes:v5
     - name: Docker Push version number
-      run: docker push viniciosaguiar/rotten-potatoes:${{github.rum_number}}
+      run: docker push viniciosaguiar/rotten-potatoes:${{github.run_number}}
       
 
         
