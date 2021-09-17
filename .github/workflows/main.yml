@@ -35,7 +35,7 @@ jobs:
         uses: risfeng/docker-image-build-push-action@v1.0
         with:
           context: ./src
-          namespaces: vinicios.aguiar
+          namespaces: viniciosaguiar
           repository_name: rotten-popatoes
           image_version: v3
           docker_file: ./src/Dockerfile
