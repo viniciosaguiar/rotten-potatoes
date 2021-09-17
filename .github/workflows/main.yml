@@ -32,7 +32,7 @@ jobs:
           # Tags override for Docker image
           tags: viniciosaguiar/rotten-potatoes:v4
           # Target Docker registry
-          #registry: 
+          registry: https://hub.docker.com/
           # Location of Dockerfile, if not Dockerfile in root directory
           dockerfile: ./src
           # Directory to run `docker build` from, if not project root
