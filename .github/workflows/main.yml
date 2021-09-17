@@ -36,7 +36,7 @@ jobs:
         with:
           context: ./src
           namespaces: viniciosaguiar
-          repository_name: rotten-popatoes
+          repository_name: rotten-potatoes
           image_version: v3
           docker_file: ./src/Dockerfile
             
