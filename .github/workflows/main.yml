@@ -29,11 +29,15 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PWD}}
       run: |
         docker login -u ${{secrets.DOCKERHUB_USER}} -p ${{secrets.DOCKERHUB_PWD}}
-    - name: Build the Docker image
-      run: docker build ./src --tag viniciosaguiar/rotten-potatoes:v5
-      
-    - name: Docker Push
+    - name: Build the Docker image latest
+      run: docker build ./src --tag viniciosaguiar/rotten-potatoes:latest
+    - name: Build the Docker image version number
+      run: docker build ./src --tag viniciosaguiar/rotten-potatoes:${{github.rum_number}}
+    - name: Docker Push latest
       run: docker push viniciosaguiar/rotten-potatoes:v5
+    - name: Docker Push version number
+      run: docker push viniciosaguiar/rotten-potatoes:${{github.rum_number}}
+      
 
         
           
